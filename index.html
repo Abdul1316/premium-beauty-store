@@ -1,118 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Beauty Store</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fff0f5;
-}
+<!-- NEW PRODUCT -->
+<div class="product">
+    <img src="https://via.placeholder.com/300x200" alt="Dhanak 3 Pcs Suit">
+    <h3>Off White Dhanak Embroidered 3 Pcs Suit</h3>
 
-header {
-    background: #ff4da6;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
+    <p><strong>Details:</strong></p>
+    <ul style="text-align:left; font-size:14px;">
+        <li>Shirt Fabric: Dhanak</li>
+        <li>Front: Embroidered</li>
+        <li>Neckline: Embroidered</li>
+        <li>Sleeves: Embroidered</li>
+        <li>Daman: Embroidered</li>
+        <li>Back: Plain</li>
+        <li>Trouser: Dhanak (Plain)</li>
+        <li>Dupatta: Dhanak (Embroidered)</li>
+        <li>3 Pcs (Shirt + Trouser + Dupatta)</li>
+        <li>Cutting: 2.5 Meter Each</li>
+        <li>Color: Off White</li>
+    </ul>
 
-.container {
-    padding: 20px;
-}
-
-.product {
-    background: white;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.price {
-    color: #ff4da6;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-button {
-    background: #25D366;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-}
-
-button:hover {
-    background: #1ebe5d;
-}
-
-footer {
-    background: #ff4da6;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>Premium Beauty Store</h1>
-    <p>Owner: Abdul Rahman</p>
-    <p>WhatsApp: 03251083724</p>
-</header>
-
-<div class="container">
-
-    <!-- PRODUCT 1 -->
-    <div class="product">
-        <h3>Glow Whitening Cream</h3>
-        <p class="price" data-price="999">Rs. 999</p>
-        <button onclick="orderProduct(this)">Order on WhatsApp</button>
-    </div>
-
-    <!-- PRODUCT 2 -->
-    <div class="product">
-        <h3>Beauty Face Wash</h3>
-        <p class="price" data-price="699">Rs. 699</p>
-        <button onclick="orderProduct(this)">Order on WhatsApp</button>
-    </div>
-
-    <!-- PRODUCT 3 -->
-    <div class="product">
-        <h3>Hair Growth Oil</h3>
-        <p class="price" data-price="1299">Rs. 1299</p>
-        <button onclick="orderProduct(this)">Order on WhatsApp</button>
-    </div>
-
+    <p class="price" data-price="5610">Rs. 5610</p>
+    <button onclick="orderProduct(this)">Order on WhatsApp</button>
 </div>
-
-<footer>
-    <p>Payment Method: Easypaisa - 03251083724</p>
-    <p>© 2026 Premium Beauty Store</p>
-</footer>
-
-<script>
-function orderProduct(button) {
-    var product = button.parentElement;
-    var name = product.querySelector("h3").innerText;
-    var price = product.querySelector(".price").getAttribute("data-price");
-
-    var phoneNumber = "923251083724";
-    var message = "Assalam o Alaikum, I want to order: " + name + " - Rs. " + price;
-    var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-
-    window.open(url, '_blank');
-}
-</script>
-
-</body>
-</html>
